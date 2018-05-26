@@ -40,7 +40,7 @@ namespace Agenda
                     pessoa.BuscaPessoa(nome);
                 }
                     
-                teste
+
 
             } while (opcao != 3 );
 
