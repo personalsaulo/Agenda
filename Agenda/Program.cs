@@ -46,7 +46,7 @@ namespace Agenda
                     if(sair == 1)
                     {
                         repositorio.cadastraPessoa(pessoa);
-                        Console.WriteLine("Dados adicionados com sucesso");
+                        Console.WriteLine("Dados adicionados com sucesso !");
                     }
                     
                 }
@@ -54,7 +54,7 @@ namespace Agenda
                 if (opcao == 2)
                 {
                     Console.WriteLine("Gerenciador de Aniversarios");
-                    Console.WriteLine("Nome: ");
+                    Console.WriteLine("Digite o nome, ou parte do nome, da pessoa que deseja encontrar: ");
                     string nome = Console.ReadLine();
 
                     repositorio.BuscaPessoa(nome);
