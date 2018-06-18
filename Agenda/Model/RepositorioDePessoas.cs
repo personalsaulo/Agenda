@@ -2,15 +2,12 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Agenda
+namespace Agenda.Model
 {
-    public class Pessoa
+    public class RepositorioDePessoas
     {
-        
-        public DateTime DataAniversario { get; set; }
-        public string Nome { get; set; }
-        public string Sobrenome { get; set; }
-        List<Pessoa> listaPessoa = new List<Pessoa>();
+      private static List<Pessoa> listaPessoa = new List<Pessoa>();
+
 
         public void cadastraPessoa(Pessoa pessoa)
         {
@@ -19,7 +16,7 @@ namespace Agenda
 
         public void BuscaPessoa(string nome)
         {
-            for(int i=0; i < listaPessoa.Count; i++)
+            for (int i = 0; i < listaPessoa.Count; i++)
             {
                 if (listaPessoa[i].Nome.Contains(nome))
                 {

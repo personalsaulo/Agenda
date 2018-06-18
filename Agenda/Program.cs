@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Agenda.Model;
+using System;
 
 namespace Agenda
 {
@@ -7,6 +8,7 @@ namespace Agenda
         static void Main(string[] args)
         {
             int opcao = 0;
+            RepositorioDePessoas repositorio = new RepositorioDePessoas();
             Pessoa pessoa = new Pessoa();
             do
             {
@@ -28,7 +30,7 @@ namespace Agenda
                     Console.WriteLine("Data De Aniversário: ");
                     pessoa.DataAniversario = DateTime.Parse(Console.ReadLine());
 
-                    pessoa.cadastraPessoa(pessoa);
+                    repositorio.cadastraPessoa(pessoa);
                 }
 
                 if (opcao == 2)
@@ -37,7 +39,7 @@ namespace Agenda
                     Console.WriteLine("Nome: ");
                     string nome = Console.ReadLine();
 
-                    pessoa.BuscaPessoa(nome);
+                    repositorio.BuscaPessoa(nome);
                 }
                     
 
