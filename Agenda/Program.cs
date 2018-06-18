@@ -22,20 +22,38 @@ namespace Agenda
 
                 if (opcao == 1)
                 {
-                    Console.WriteLine("Cadastrando....: ");
-                    Console.WriteLine("Nome: ");
-                    pessoa.Nome = Console.ReadLine();
-                    Console.WriteLine("Sobrenome: ");
-                    pessoa.Sobrenome = Console.ReadLine();
-                    Console.WriteLine("Data De Aniversário: ");
-                    pessoa.DataAniversario = DateTime.Parse(Console.ReadLine());
+                    int sair = 0;
+                    Console.WriteLine("Gerenciador de Aniversarios");
+                    do
+                    {
+                        Console.WriteLine("Digite o nome da pessoa que deseja adicionar: ");
+                        pessoa.Nome = Console.ReadLine();
+                        Console.WriteLine("Digite o sobrenome da pessoa que deseja adicionar: ");
+                        pessoa.Sobrenome = Console.ReadLine();
+                        Console.WriteLine("Digite a data de aniversario no formato dd/MM/yyyy: ");
+                        pessoa.DataAniversario = DateTime.Parse(Console.ReadLine());
 
-                    repositorio.cadastraPessoa(pessoa);
+
+                        Console.WriteLine("Os dados estão corretos ?");
+                        Console.WriteLine("Nome: " + pessoa.Nome + " " + pessoa.Sobrenome);
+                        Console.WriteLine("Data do aniversario: " + pessoa.DataAniversario);
+
+                        Console.WriteLine("1 - Sim");
+                        Console.WriteLine("2 - Não");
+                        sair = int.Parse(Console.ReadLine());
+                    } while (sair == 2);
+                    
+                    if(sair == 1)
+                    {
+                        repositorio.cadastraPessoa(pessoa);
+                        Console.WriteLine("Dados adicionados com sucesso");
+                    }
+                    
                 }
 
                 if (opcao == 2)
                 {
-                    Console.WriteLine("Pesquisando.... ");
+                    Console.WriteLine("Gerenciador de Aniversarios");
                     Console.WriteLine("Nome: ");
                     string nome = Console.ReadLine();
 
