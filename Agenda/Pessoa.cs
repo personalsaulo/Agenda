@@ -6,9 +6,10 @@ namespace Agenda
 {
     public class Pessoa
     {
-        public string  Email { get; set; }
-        public int Idade { get; set; }
+        
+        public DateTime DataAniversario { get; set; }
         public string Nome { get; set; }
+        public string Sobrenome { get; set; }
         List<Pessoa> listaPessoa = new List<Pessoa>();
 
         public void cadastraPessoa(Pessoa pessoa)
@@ -22,7 +23,7 @@ namespace Agenda
             {
                 if (listaPessoa[i].Nome.Contains(nome))
                 {
-                    Console.WriteLine(" Nome: " + listaPessoa[i].Nome + " Idade: "+ listaPessoa[i].Idade + " Email: " + listaPessoa[i].Email);
+                    Console.WriteLine(" Nome: " + listaPessoa[i].Nome + " Sobrenome: " + listaPessoa[i].Sobrenome + "  Data de Aniversário: : " + listaPessoa[i].DataAniversario);
                 }
 
             }

@@ -23,10 +23,10 @@ namespace Agenda
                     Console.WriteLine("Cadastrando....: ");
                     Console.WriteLine("Nome: ");
                     pessoa.Nome = Console.ReadLine();
-                    Console.WriteLine("Idade: ");
-                    pessoa.Idade = int.Parse(Console.ReadLine());
-                    Console.WriteLine("Email: ");
-                    pessoa.Email = Console.ReadLine();
+                    Console.WriteLine("Sobrenome: ");
+                    pessoa.Sobrenome = Console.ReadLine();
+                    Console.WriteLine("Data De Aniversário: ");
+                    pessoa.DataAniversario = DateTime.Parse(Console.ReadLine());
 
                     pessoa.cadastraPessoa(pessoa);
                 }
