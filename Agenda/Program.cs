@@ -12,9 +12,9 @@ namespace Agenda
             Pessoa pessoa = new Pessoa();
             do
             {
-                Console.WriteLine("Agenda");
-                Console.WriteLine("1 - Cadastrar");
-                Console.WriteLine("2 - Pesquisar");
+                Console.WriteLine("Gerenciador de Aniversarios");
+                Console.WriteLine("1 - Adicionar nova pessoa");
+                Console.WriteLine("2 - Pesquisar pessoas");
                 Console.WriteLine("3 - Sair");
 
                 opcao = int.Parse(Console.ReadLine());
